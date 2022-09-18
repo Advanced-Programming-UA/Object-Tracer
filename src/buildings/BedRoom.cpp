@@ -17,8 +17,7 @@ BedRoom::BedRoom(BedRoom&& b) : Room(std::move(b)) { MEMBER_TRACER; }
 
 BedRoom::~BedRoom() { MEMBER_TRACER; }
 
-BedRoom& BedRoom::operator=(const BedRoom& other)
-{
+BedRoom& BedRoom::operator=(const BedRoom& other) {
     MEMBER_TRACER;
     if (this != &other) {
         Room::operator=(other);
@@ -26,8 +25,7 @@ BedRoom& BedRoom::operator=(const BedRoom& other)
     return *this;
 }
 
-BedRoom& BedRoom::operator=(BedRoom&& other)
-{
+BedRoom& BedRoom::operator=(BedRoom&& other) {
     MEMBER_TRACER;
     if (this != &other) {
         Room::operator=(std::move(other));
@@ -35,8 +33,7 @@ BedRoom& BedRoom::operator=(BedRoom&& other)
     return *this;
 }
 
-void BedRoom::info() const
-{
+void BedRoom::info() const {
     MEMBER_TRACER;
     LOG_TRACER("BedRoom");
 }

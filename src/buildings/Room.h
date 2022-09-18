@@ -13,8 +13,7 @@
 
 namespace tracing_example_exam {
 
-class Room
-{
+class Room {
 public:
     /// Constructor
     Room();

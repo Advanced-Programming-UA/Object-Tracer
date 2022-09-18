@@ -12,32 +12,31 @@
 
 namespace tracing_example_exam {
 
-class Person
-{
+class Person {
 public:
-        /// Constructor
-        Person(std::string name);
+    /// Constructor
+    Person(std::string name);
 
-        /// Copy Constructor
-        Person(const Person& p);
+    /// Copy Constructor
+    Person(const Person& p);
 
-        /// Move Constructor
-        Person(Person&& p);
+    /// Move Constructor
+    Person(Person&& p);
 
-        /// Copy-assignment of a Person:
-        Person& operator=(const Person&);
+    /// Copy-assignment of a Person:
+    Person& operator=(const Person&);
 
-        /// Move-assignment of a Person:
-        Person& operator=(Person&&);
+    /// Move-assignment of a Person:
+    Person& operator=(Person&&);
 
-        /// Destructor.
-        ~Person();
+    /// Destructor.
+    ~Person();
 
-        /// Returns the name of the Person
-        std::string getName() const;
+    /// Returns the name of the Person
+    std::string getName() const;
 
 private:
-        std::string m_name;
+    std::string m_name;
 };
 
 } // namespace tracing_example_exam

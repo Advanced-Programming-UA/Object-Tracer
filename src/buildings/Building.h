@@ -16,8 +16,7 @@
 
 namespace tracing_example_exam {
 
-class Building
-{
+class Building {
 public:
     /// Constructor
     Building(Person& owner);

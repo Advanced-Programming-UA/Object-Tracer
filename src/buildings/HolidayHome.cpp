@@ -17,8 +17,7 @@ HolidayHome::HolidayHome(const HolidayHome& h) : House(h), Rentable(h) { MEMBER_
 
 HolidayHome::HolidayHome(HolidayHome&& h) : House(std::move(h)), Rentable(std::move(h)) { MEMBER_TRACER; }
 
-HolidayHome& HolidayHome::operator=(const HolidayHome& other)
-{
+HolidayHome& HolidayHome::operator=(const HolidayHome& other) {
     MEMBER_TRACER;
     if (this != &other) {
         House::operator=(other);
@@ -27,8 +26,7 @@ HolidayHome& HolidayHome::operator=(const HolidayHome& other)
     return *this;
 }
 
-HolidayHome& HolidayHome::operator=(HolidayHome&& other)
-{
+HolidayHome& HolidayHome::operator=(HolidayHome&& other) {
     MEMBER_TRACER;
     if (this != &other) {
         House::operator=(std::move(other));
@@ -37,14 +35,12 @@ HolidayHome& HolidayHome::operator=(HolidayHome&& other)
     return *this;
 }
 
-std::string HolidayHome::getName() const
-{
+std::string HolidayHome::getName() const {
     MEMBER_TRACER;
     return "HolidayHome";
 }
 
-void HolidayHome::addNeighbour(HolidayHome* neighbour)
-{
+void HolidayHome::addNeighbour(HolidayHome* neighbour) {
     MEMBER_TRACER;
     if (neighbour != this) {
         m_neighbours.emplace_back(neighbour);

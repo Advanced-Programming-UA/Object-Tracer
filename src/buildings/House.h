@@ -16,37 +16,36 @@
 
 namespace tracing_example_exam {
 
-class House : public Building
-{
+class House : public Building {
 public:
-        /// Constructor
-        House(Person owner, unsigned int bedrooms);
+    /// Constructor
+    House(Person owner, unsigned int bedrooms);
 
-        /// Destructor.
-        virtual ~House();
+    /// Destructor.
+    virtual ~House();
 
-        /// Copy Constructor
-        House(const House& h);
+    /// Copy Constructor
+    House(const House& h);
 
-        /// Move Constructor
-        House(House&& h);
+    /// Move Constructor
+    House(House&& h);
 
-        /// Copy-assignment of a House:
-        House& operator=(const House&);
+    /// Copy-assignment of a House:
+    House& operator=(const House&);
 
-        /// Move-assignment of a House:
-        House& operator=(House&&);
+    /// Move-assignment of a House:
+    House& operator=(House&&);
 
-        /// Returns the name of the Building
-        virtual std::string getName() const override;
+    /// Returns the name of the Building
+    virtual std::string getName() const override;
 
-        /// Adds a House to the list of neighbours of the current House
-        /// It does not take ownership of this neighbouring House
-        virtual void addNeighbour(House* neighbour);
+    /// Adds a House to the list of neighbours of the current House
+    /// It does not take ownership of this neighbouring House
+    virtual void addNeighbour(House* neighbour);
 
 private:
-        std::shared_ptr<const BathRoom> m_bathroom = std::make_shared<const BathRoom>();
-        Kitchen m_kitchen;
+    std::shared_ptr<const BathRoom> m_bathroom = std::make_shared<const BathRoom>();
+    Kitchen m_kitchen;
 };
 
 } // namespace tracing_example_exam

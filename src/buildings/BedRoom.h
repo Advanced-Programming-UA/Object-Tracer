@@ -15,8 +15,7 @@
 
 namespace tracing_example_exam {
 
-class BedRoom : public Room
-{
+class BedRoom : public Room {
 public:
     /// Constructor
     BedRoom();

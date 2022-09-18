@@ -18,25 +18,22 @@ Building::Building(const Person& owner) : m_rooms(), m_neighbours(), m_owner(own
 
 Building::Building(Person&& owner) : m_rooms(), m_neighbours(), m_owner(std::move(owner)) { MEMBER_TRACER; }
 
-Building::Building(const Building& b) : m_rooms(), m_neighbours(), m_owner(b.m_owner)
-    {
-        MEMBER_TRACER;
-        m_rooms = b.m_rooms;
-    }
+Building::Building(const Building& b) : m_rooms(), m_neighbours(), m_owner(b.m_owner) {
+    MEMBER_TRACER;
+    m_rooms = b.m_rooms;
+}
 
-Building::Building(Building&& b) : m_rooms(), m_neighbours(), m_owner(std::move(b.m_owner))
-    {
-        MEMBER_TRACER;
-        m_rooms.clear();
-        m_neighbours.clear();
-        m_rooms = std::move(b.m_rooms);
-        m_neighbours = std::move(b.m_neighbours);
-    }
+Building::Building(Building&& b) : m_rooms(), m_neighbours(), m_owner(std::move(b.m_owner)) {
+    MEMBER_TRACER;
+    m_rooms.clear();
+    m_neighbours.clear();
+    m_rooms = std::move(b.m_rooms);
+    m_neighbours = std::move(b.m_neighbours);
+}
 
 Building::~Building() { MEMBER_TRACER; }
 
-Building& Building::operator=(const Building& other)
-{
+Building& Building::operator=(const Building& other) {
     MEMBER_TRACER;
     if (this != &other) {
         m_rooms = other.m_rooms;
@@ -46,8 +43,7 @@ Building& Building::operator=(const Building& other)
     return *this;
 }
 
-Building& Building::operator=(Building&& other)
-{
+Building& Building::operator=(Building&& other) {
     MEMBER_TRACER;
     if (this != &other) {
         m_rooms.clear();
@@ -59,8 +55,7 @@ Building& Building::operator=(Building&& other)
     return *this;
 }
 
-void Building::info() const
-{
+void Building::info() const {
     MEMBER_TRACER;
     LOG_TRACER(getName() + " containing " + std::to_string(m_rooms.size()) + " rooms:");
     for (auto room : m_rooms) {
@@ -69,20 +64,17 @@ void Building::info() const
     LOG_TRACER("And " + std::to_string(m_neighbours.size()) + " neighbours");
 }
 
-std::string Building::getName() const
-{
+std::string Building::getName() const {
     MEMBER_TRACER;
     return "Generic Building";
 }
 
-Person& Building::getOwner()
-{
+Person& Building::getOwner() {
     MEMBER_TRACER;
     return m_owner;
 }
 
-void Building::addNeighbour(Building* neighbour)
-{
+void Building::addNeighbour(Building* neighbour) {
     MEMBER_TRACER;
     if (neighbour != this) {
         m_neighbours.emplace_back(neighbour);

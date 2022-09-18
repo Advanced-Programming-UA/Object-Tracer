@@ -15,32 +15,31 @@
 
 namespace tracing_example_exam {
 
-class Rentable
-{
+class Rentable {
 public:
-        /// Constructor
-        Rentable();
+    /// Constructor
+    Rentable();
 
-        /// Copy Constructor
-        Rentable(const Rentable& r);
+    /// Copy Constructor
+    Rentable(const Rentable& r);
 
-        /// Move Constructor
-        Rentable(Rentable&& r);
+    /// Move Constructor
+    Rentable(Rentable&& r);
 
-        /// Destructor.
-        virtual ~Rentable();
+    /// Destructor.
+    virtual ~Rentable();
 
-        /// Copy-assignment of a Rentable:
-        Rentable& operator=(const Rentable&);
+    /// Copy-assignment of a Rentable:
+    Rentable& operator=(const Rentable&);
 
-        /// Move-assignment of a Rentable:
-        Rentable& operator=(Rentable&&);
+    /// Move-assignment of a Rentable:
+    Rentable& operator=(Rentable&&);
 
-        /// Rent this Rentable
-        void rent(Person& renter);
+    /// Rent this Rentable
+    void rent(Person& renter);
 
 private:
-        std::shared_ptr<Person> m_renter;
+    std::shared_ptr<Person> m_renter;
 };
 
 } // namespace tracing_example_exam

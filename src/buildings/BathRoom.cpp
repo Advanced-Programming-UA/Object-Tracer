@@ -17,8 +17,7 @@ BathRoom::BathRoom(BathRoom&& b) : Room(std::move(b)) { MEMBER_TRACER; }
 
 BathRoom::~BathRoom() { MEMBER_TRACER; }
 
-BathRoom& BathRoom::operator=(const BathRoom& other)
-{
+BathRoom& BathRoom::operator=(const BathRoom& other) {
     MEMBER_TRACER;
     if (this != &other) {
         Room::operator=(other);
@@ -26,8 +25,7 @@ BathRoom& BathRoom::operator=(const BathRoom& other)
     return *this;
 }
 
-BathRoom& BathRoom::operator=(BathRoom&& other)
-{
+BathRoom& BathRoom::operator=(BathRoom&& other) {
     MEMBER_TRACER;
     if (this != &other) {
         Room::operator=(std::move(other));
@@ -35,8 +33,7 @@ BathRoom& BathRoom::operator=(BathRoom&& other)
     return *this;
 }
 
-void BathRoom::info() const
-{
+void BathRoom::info() const {
     MEMBER_TRACER;
     LOG_TRACER("BathRoom");
 }

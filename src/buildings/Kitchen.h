@@ -15,29 +15,28 @@
 
 namespace tracing_example_exam {
 
-class Kitchen : public Room
-{
+class Kitchen : public Room {
 public:
-        /// Constructor
-        Kitchen();
+    /// Constructor
+    Kitchen();
 
-        /// Copy Constructor
-        Kitchen(const Kitchen& p);
+    /// Copy Constructor
+    Kitchen(const Kitchen& p);
 
-        /// Move Constructor
-        Kitchen(Kitchen&& p);
+    /// Move Constructor
+    Kitchen(Kitchen&& p);
 
-        /// Destructor.
-        virtual ~Kitchen();
+    /// Destructor.
+    virtual ~Kitchen();
 
-        /// Copy-assignment of a Kitchen:
-        Kitchen& operator=(const Kitchen&);
+    /// Copy-assignment of a Kitchen:
+    Kitchen& operator=(const Kitchen&);
 
-        /// Move-assignment of a Kitchen:
-        Kitchen& operator=(Kitchen&&);
+    /// Move-assignment of a Kitchen:
+    Kitchen& operator=(Kitchen&&);
 
-        /// Return room information.
-        virtual void info() const override;
+    /// Return room information.
+    virtual void info() const override;
 };
 
 } // namespace tracing_example_exam

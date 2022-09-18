@@ -15,8 +15,7 @@
 
 namespace tracing_example_exam {
 
-class BathRoom : public Room
-{
+class BathRoom : public Room {
 public:
     /// Constructor
     BathRoom();

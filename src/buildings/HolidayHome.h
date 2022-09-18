@@ -13,33 +13,32 @@
 
 namespace tracing_example_exam {
 
-class HolidayHome : public House, public Rentable
-{
-    public:
-        /// Constructor
-        HolidayHome(Person& owner, unsigned int bedrooms);
+class HolidayHome : public House, public Rentable {
+public:
+    /// Constructor
+    HolidayHome(Person& owner, unsigned int bedrooms);
 
-        /// Copy Constructor
-        HolidayHome(const HolidayHome& h);
+    /// Copy Constructor
+    HolidayHome(const HolidayHome& h);
 
-        /// Move Constructor
-        HolidayHome(HolidayHome&& h);
+    /// Move Constructor
+    HolidayHome(HolidayHome&& h);
 
-        /// Destructor.
-        virtual ~HolidayHome();
+    /// Destructor.
+    virtual ~HolidayHome();
 
-        /// Copy-assignment of a HolidayHome:
-        HolidayHome& operator=(const HolidayHome&);
+    /// Copy-assignment of a HolidayHome:
+    HolidayHome& operator=(const HolidayHome&);
 
-        /// Move-assignment of a HolidayHome:
-        HolidayHome& operator=(HolidayHome&&);
+    /// Move-assignment of a HolidayHome:
+    HolidayHome& operator=(HolidayHome&&);
 
-        /// Returns the name of the Building
-        virtual std::string getName() const override;
+    /// Returns the name of the Building
+    virtual std::string getName() const override;
 
-        /// Adds a HolidayHome to the list of neighbours of the current House
-        /// It does not take ownership of this neighbouring HolidayHome
-        virtual void addNeighbour(HolidayHome* neighbour);
+    /// Adds a HolidayHome to the list of neighbours of the current House
+    /// It does not take ownership of this neighbouring HolidayHome
+    virtual void addNeighbour(HolidayHome* neighbour);
 };
 
 } // namespace tracing_example_exam
