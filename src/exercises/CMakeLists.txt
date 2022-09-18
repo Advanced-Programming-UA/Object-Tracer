@@ -1,0 +1,11 @@
+add_library(exercises
+    app_copy.cpp
+    app_essentialops.cpp
+    app_example_exam_2021_1.cpp
+    app_example_exam_2021_2.cpp
+    app_exception.cpp
+    app_fcalls.cpp
+    app_hierarchies.cpp
+    app_poly1.cpp
+    app_poly2.cpp
+)

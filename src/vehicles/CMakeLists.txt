@@ -1,0 +1,15 @@
+add_library(vehicles
+    Bicycle.cpp
+    Engine.cpp
+    LandVehicle.cpp
+    PassengerRoadVehicle.cpp
+    RoadVehicle.cpp
+    Unicycle.cpp
+    Wheel.cpp
+    Body.cpp
+    Exception.cpp
+    Motorcycle.cpp
+    Person.cpp
+    SailBoat.cpp
+    WaterVehicle.cpp
+)
