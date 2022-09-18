@@ -1,9 +1,3 @@
-/**
- * @file
- * Demo code for what happens with function call arguments.
- * @author J. Broeckhove  CoMP/UA, 2011.
- */
-
 #include "demos.h"
 #include "utils/tracer.h"
 #include "vehicles/Motorcycle.h"
@@ -36,12 +30,7 @@ void f3p(const Motorcycle* bp) {
 Motorcycle g() { return Motorcycle(); }
 } // namespace
 
-/**
- * Demo prog for features of essential ops.
- *
- * @return      status
- * @exception   None.
- */
+
 int app_fcalls() {
     FUNCTION_TRACER;
 

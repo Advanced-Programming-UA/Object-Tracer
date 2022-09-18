@@ -3,9 +3,7 @@
 
 namespace Vehicles {
 
-using namespace std;
-
-SailBoat::SailBoat(string name) : WaterVehicle(), m_name(std::move(name)), m_sails_up(false) { MEMBER_TRACER; }
+SailBoat::SailBoat(std::string name) : WaterVehicle(), m_name(std::move(name)), m_sails_up(false) { MEMBER_TRACER; }
 
 SailBoat::SailBoat(const SailBoat& ori) : WaterVehicle(ori), m_name(ori.m_name), m_sails_up(ori.m_sails_up) {
     MEMBER_TRACER;
@@ -40,7 +38,7 @@ SailBoat::~SailBoat() { MEMBER_TRACER; }
 
 void SailBoat::info() const {
     MEMBER_TRACER;
-    string s{"I'm a sailboat named \"" + m_name + "\" and my sails are "};
+    std::string s{"I'm a sailboat named \"" + m_name + "\" and my sails are "};
     if (m_sails_up) {
         s.append("up.");
     } else {
@@ -49,7 +47,7 @@ void SailBoat::info() const {
     LOG_TRACER(s);
 }
 
-void SailBoat::move(double, vector<double>) {
+void SailBoat::move(double, std::vector<double>) {
     MEMBER_TRACER;
     m_sails_up = true;
 }

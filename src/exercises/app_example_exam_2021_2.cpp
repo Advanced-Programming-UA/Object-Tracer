@@ -38,7 +38,7 @@ int app_example_exam_2021_2() {
         BLOCK_TRACER("First block");
 
         LOG_TRACER("statement: const Person p1(\"Steve\");");
-        Person p1("Steve"); // Note that this is tracing_exam::Person, not ODemo::Person!
+        Person p1("Steve"); // Note that this is tracing_example_exam::Person, not Vehicle::Person!
 
         LOG_TRACER("statement: Building b1(p1);");
         Building b1(p1);

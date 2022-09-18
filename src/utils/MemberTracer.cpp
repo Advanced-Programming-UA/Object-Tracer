@@ -1,10 +1,9 @@
 #include "utils/MemberTracer.h"
 #include <sstream>
 
-using namespace std;
 using namespace Utils;
 
-MemberTracer::MemberTracer(const string& member_name, const void* object_this)
+MemberTracer::MemberTracer(const std::string& member_name, const void* object_this)
     : m_member_name(member_name), m_object_this(object_this) {
     std::ostringstream ss;
     ss << "---> member for object: " << m_object_this << " : " << m_member_name;
