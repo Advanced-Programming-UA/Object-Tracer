@@ -1,0 +1,15 @@
+add_library(buildings_2022_2
+    BathRoom.cpp
+    BedRoom.cpp
+    Building.cpp
+    HolidayHome.cpp
+    House.cpp
+    Kitchen.cpp
+    Person.cpp
+    Rentable.cpp
+    Road.cpp
+    Room.cpp
+    Visitor.cpp
+    RoadObserver.cpp
+    RentableObserver.cpp
+)

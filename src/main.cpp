@@ -37,8 +37,10 @@ int main() {
         f_reg["hierarchies"] = app_hierarchies;
         f_reg["poly1"] = app_poly1;
         f_reg["poly2"] = app_poly2;
-        f_reg["exam_2021_1"] = app_example_exam_2021_1;
-        f_reg["exam_2021_2"] = app_example_exam_2021_2;
+        f_reg["exam_2021_1"] = app_exam_2021_1;
+        f_reg["exam_2021_2"] = app_exam_2021_2;
+        f_reg["exam_2022_1"] = app_exam_2022_1;
+        f_reg["exam_2022_2"] = app_exam_2022_2;
         f_reg.list(std::cout);
 
         //----------------------------------------------------------------------
