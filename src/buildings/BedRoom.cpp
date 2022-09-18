@@ -19,26 +19,26 @@ BedRoom::~BedRoom() { MEMBER_TRACER; }
 
 BedRoom& BedRoom::operator=(const BedRoom& other)
 {
-        MEMBER_TRACER;
-        if (this != &other) {
-                Room::operator=(other);
-        }
-        return *this;
+    MEMBER_TRACER;
+    if (this != &other) {
+        Room::operator=(other);
+    }
+    return *this;
 }
 
 BedRoom& BedRoom::operator=(BedRoom&& other)
 {
-        MEMBER_TRACER;
-        if (this != &other) {
-                Room::operator=(std::move(other));
-        }
-        return *this;
+    MEMBER_TRACER;
+    if (this != &other) {
+        Room::operator=(std::move(other));
+    }
+    return *this;
 }
 
 void BedRoom::info() const
 {
-        MEMBER_TRACER;
-        LOG_TRACER("BedRoom");
+    MEMBER_TRACER;
+    LOG_TRACER("BedRoom");
 }
 
 } // namespace tracing_example_exam

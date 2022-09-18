@@ -15,7 +15,7 @@ namespace tracing_example_exam {
 
 class HolidayHome : public House, public Rentable
 {
-public:
+    public:
         /// Constructor
         HolidayHome(Person& owner, unsigned int bedrooms);
 

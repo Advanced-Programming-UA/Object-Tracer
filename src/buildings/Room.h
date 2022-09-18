@@ -16,26 +16,26 @@ namespace tracing_example_exam {
 class Room
 {
 public:
-        /// Constructor
-        Room();
+    /// Constructor
+    Room();
 
-        /// Copy Constructor
-        Room(const Room& p);
+    /// Copy Constructor
+    Room(const Room& p);
 
-        /// Move Constructor
-        Room(Room&& p);
+    /// Move Constructor
+    Room(Room&& p);
 
-        /// Destructor.
-        virtual ~Room();
+    /// Destructor.
+    virtual ~Room();
 
-        /// Copy-assignment of a Room:
-        Room& operator=(const Room&);
+    /// Copy-assignment of a Room:
+    Room& operator=(const Room&);
 
-        /// Move-assignment of a Room:
-        Room& operator=(Room&&);
+    /// Move-assignment of a Room:
+    Room& operator=(Room&&);
 
-        /// Return room information.
-        virtual void info() const;
+    /// Return room information.
+    virtual void info() const;
 };
 
 } // namespace tracing_example_exam

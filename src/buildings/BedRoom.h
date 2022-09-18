@@ -18,26 +18,26 @@ namespace tracing_example_exam {
 class BedRoom : public Room
 {
 public:
-        /// Constructor
-        BedRoom();
+    /// Constructor
+    BedRoom();
 
-        /// Copy Constructor
-        BedRoom(const BedRoom& p);
+    /// Copy Constructor
+    BedRoom(const BedRoom& p);
 
-        /// Move Constructor
-        BedRoom(BedRoom&& p);
+    /// Move Constructor
+    BedRoom(BedRoom&& p);
 
-        /// Destructor.
-        virtual ~BedRoom();
+    /// Destructor.
+    virtual ~BedRoom();
 
-        /// Copy-assignment of a BedRoom:
-        BedRoom& operator=(const BedRoom&);
+    /// Copy-assignment of a BedRoom:
+    BedRoom& operator=(const BedRoom&);
 
-        /// Move-assignment of a BedRoom:
-        BedRoom& operator=(BedRoom&&);
+    /// Move-assignment of a BedRoom:
+    BedRoom& operator=(BedRoom&&);
 
-        /// Return room information.
-        virtual void info() const override;
+    /// Return room information.
+    virtual void info() const override;
 };
 
 } // namespace tracing_example_exam

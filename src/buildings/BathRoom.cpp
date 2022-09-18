@@ -19,26 +19,26 @@ BathRoom::~BathRoom() { MEMBER_TRACER; }
 
 BathRoom& BathRoom::operator=(const BathRoom& other)
 {
-        MEMBER_TRACER;
-        if (this != &other) {
-                Room::operator=(other);
-        }
-        return *this;
+    MEMBER_TRACER;
+    if (this != &other) {
+        Room::operator=(other);
+    }
+    return *this;
 }
 
 BathRoom& BathRoom::operator=(BathRoom&& other)
 {
-        MEMBER_TRACER;
-        if (this != &other) {
-                Room::operator=(std::move(other));
-        }
-        return *this;
+    MEMBER_TRACER;
+    if (this != &other) {
+        Room::operator=(std::move(other));
+    }
+    return *this;
 }
 
 void BathRoom::info() const
 {
-        MEMBER_TRACER;
-        LOG_TRACER("BathRoom");
+    MEMBER_TRACER;
+    LOG_TRACER("BathRoom");
 }
 
 } // namespace tracing_example_exam

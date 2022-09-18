@@ -19,47 +19,47 @@ namespace tracing_example_exam {
 class Building
 {
 public:
-        /// Constructor
-        Building(Person& owner);
+    /// Constructor
+    Building(Person& owner);
 
-        /// Constructor
-        Building(const Person& owner);
+    /// Constructor
+    Building(const Person& owner);
 
-        /// Constructor
-        Building(Person&& owner);
+    /// Constructor
+    Building(Person&& owner);
 
-        /// Copy Constructor
-        Building(const Building& b);
+    /// Copy Constructor
+    Building(const Building& b);
 
-        /// Move Constructor
-        Building(Building&& b);
+    /// Move Constructor
+    Building(Building&& b);
 
-        /// Copy-assignment of a Building:
-        Building& operator=(const Building&);
+    /// Copy-assignment of a Building:
+    Building& operator=(const Building&);
 
-        /// Move-assignment of a Building:
-        Building& operator=(Building&&);
+    /// Move-assignment of a Building:
+    Building& operator=(Building&&);
 
-        /// Destructor.
-        virtual ~Building();
+    /// Destructor.
+    virtual ~Building();
 
-        /// Prints building information.
-        virtual void info() const;
+    /// Prints building information.
+    virtual void info() const;
 
-        /// Returns the name of the Building
-        virtual std::string getName() const;
+    /// Returns the name of the Building
+    virtual std::string getName() const;
 
-        /// Returns the Person who owns the building
-        virtual Person& getOwner();
+    /// Returns the Person who owns the building
+    virtual Person& getOwner();
 
-        /// Adds a Building to the list of neighbours of the current building
-        /// It does not take ownership of this neighbouring Building
-        virtual void addNeighbour(Building* neighbour);
+    /// Adds a Building to the list of neighbours of the current building
+    /// It does not take ownership of this neighbouring Building
+    virtual void addNeighbour(Building* neighbour);
 
 protected:
-        std::vector<std::shared_ptr<const Room>> m_rooms;
-        std::vector<Building*> m_neighbours;
-        Person m_owner;
+    std::vector<std::shared_ptr<const Room>> m_rooms;
+    std::vector<Building*> m_neighbours;
+    Person m_owner;
 };
 
 } // namespace tracing_example_exam
