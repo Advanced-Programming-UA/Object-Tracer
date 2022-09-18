@@ -26,24 +26,23 @@ namespace Utils {
  * when leaving the member function body and triggers the appropriate
  * message. The messages are logged to the tracer_log.
  */
-class MemberTracer
-{
+class MemberTracer {
 public:
-        /// Constructor inserts message in TracerOutput about entering member body.
-        MemberTracer(const std::string& member_name, const void* object_this);
+    /// Constructor inserts message in TracerOutput about entering member body.
+    MemberTracer(const std::string& member_name, const void* object_this);
 
-        /// No copy constructor.
-        MemberTracer(const MemberTracer&) = delete;
+    /// No copy constructor.
+    MemberTracer(const MemberTracer&) = delete;
 
-        /// No assignment.
-        MemberTracer& operator=(const MemberTracer&) = delete;
+    /// No assignment.
+    MemberTracer& operator=(const MemberTracer&) = delete;
 
-        /// Destructor inserts message in TracerOutput about leaving member body.
-        ~MemberTracer();
+    /// Destructor inserts message in TracerOutput about leaving member body.
+    ~MemberTracer();
 
 private:
-        const std::string m_member_name;
-        const void* const m_object_this;
+    const std::string m_member_name;
+    const void* const m_object_this;
 };
 
-} // Utils
+} // namespace Utils

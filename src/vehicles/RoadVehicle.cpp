@@ -11,31 +11,28 @@ RoadVehicle::RoadVehicle(const RoadVehicle& ori) : LandVehicle(ori) { MEMBER_TRA
 
 RoadVehicle::RoadVehicle(RoadVehicle&& ori) noexcept : LandVehicle(std::move(ori)) { MEMBER_TRACER; }
 
-RoadVehicle& RoadVehicle::operator=(const RoadVehicle& rhs)
-{
-        MEMBER_TRACER;
-        if (this != &rhs) {
-                LandVehicle::operator=(rhs);
-        }
-        return *this;
+RoadVehicle& RoadVehicle::operator=(const RoadVehicle& rhs) {
+    MEMBER_TRACER;
+    if (this != &rhs) {
+        LandVehicle::operator=(rhs);
+    }
+    return *this;
 }
 
-RoadVehicle& RoadVehicle::operator=(RoadVehicle&& rhs) noexcept
-{
-        MEMBER_TRACER;
-        if (this != &rhs) {
-                LandVehicle::operator=(rhs);
-        }
-        return *this;
+RoadVehicle& RoadVehicle::operator=(RoadVehicle&& rhs) noexcept {
+    MEMBER_TRACER;
+    if (this != &rhs) {
+        LandVehicle::operator=(rhs);
+    }
+    return *this;
 }
 
 RoadVehicle::~RoadVehicle() { MEMBER_TRACER; }
 
-void RoadVehicle::info() const
-{
-        MEMBER_TRACER;
-        const string s{"I'm a generic Road vehicle"};
-        LOG_TRACER(s);
+void RoadVehicle::info() const {
+    MEMBER_TRACER;
+    const string s{"I'm a generic Road vehicle"};
+    LOG_TRACER(s);
 }
 
 void RoadVehicle::move(double, vector<double>) { MEMBER_TRACER; }

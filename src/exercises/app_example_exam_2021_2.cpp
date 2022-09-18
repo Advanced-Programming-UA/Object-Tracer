@@ -10,38 +10,29 @@
 #include <memory>
 #include <stdexcept>
 
-#include "buildings/HolidayHome.h"
 #include "buildings/Building.h"
+#include "buildings/HolidayHome.h"
 #include "buildings/Person.h"
 
 using namespace tracing_example_exam;
 
 namespace {
-    void f(HolidayHome&) {
-        FUNCTION_TRACER;
-    }
+void f(HolidayHome&) { FUNCTION_TRACER; }
 
-    void f(const HolidayHome&) {
-        FUNCTION_TRACER;
-    }
-    void f(House&) {
-        FUNCTION_TRACER;
-    }
-    void f(const House&) {
-        FUNCTION_TRACER;
-        }
+void f(const HolidayHome&) { FUNCTION_TRACER; }
+void f(House&) { FUNCTION_TRACER; }
+void f(const House&) { FUNCTION_TRACER; }
 
-    // Make sure you provide the actual type T for each template instantiation
-    // For example:   ---> function body: T copy(const T&) [with T = tracing_exam::Person]
-    template<typename T>
-    T copy(const T& t) {
-        FUNCTION_TRACER;
-        return T(t);
-    }
+// Make sure you provide the actual type T for each template instantiation
+// For example:   ---> function body: T copy(const T&) [with T = tracing_exam::Person]
+template <typename T>
+T copy(const T& t) {
+    FUNCTION_TRACER;
+    return T(t);
 }
+} // namespace
 
-int app_example_exam_2021_2()
-{
+int app_example_exam_2021_2() {
     FUNCTION_TRACER;
     {
         BLOCK_TRACER("First block");
@@ -58,7 +49,6 @@ int app_example_exam_2021_2()
         LOG_TRACER("statement: Building* b3 = copy(new Building(Person(b2.getOwner())));");
         Building* b3 = copy(new Building(Person(b2.getOwner())));
 
-
         LOG_TRACER("statement: Building* b4 = b3;");
         Building* b4 = b3;
 
@@ -70,7 +60,6 @@ int app_example_exam_2021_2()
 
         LOG_TRACER("statement: b1 = b2;");
         b1 = b2;
-
 
         LOG_TRACER("statement: delete b4;");
         delete b4;
@@ -106,7 +95,6 @@ int app_example_exam_2021_2()
 
             LOG_TRACER("statement: auto h5 = copy<const House*>(h2);");
             auto h5 = copy<const House*>(h2);
-
 
             LOG_TRACER("statement: f(*h1);");
             f(*h1);

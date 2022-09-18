@@ -8,17 +8,16 @@ namespace Vehicles {
 /**
  * This Vehicle interface class.
  */
-class Vehicle
-{
+class Vehicle {
 public:
-        /// Destructor.
-        virtual ~Vehicle() = default;
+    /// Destructor.
+    virtual ~Vehicle() = default;
 
-        /// Return vehicle information.
-        virtual void info() const = 0;
+    /// Return vehicle information.
+    virtual void info() const = 0;
 
-        /// Motion of vehicle.
-        virtual void move(double speed, std::vector<double> direction) = 0;
+    /// Motion of vehicle.
+    virtual void move(double speed, std::vector<double> direction) = 0;
 };
 
 } // namespace Vehicles

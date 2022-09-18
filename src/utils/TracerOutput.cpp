@@ -15,14 +15,13 @@ void TracerOutput::increase_indent() { m_indent++; }
 
 void TracerOutput::decrease_indent() { m_indent--; }
 
-void TracerOutput::log(const string& msg)
-{
-        if (is_output_on()) {
-                for (unsigned int i = 0; i < m_indent; ++i) {
-                        m_output << "     ";
-                }
-                m_output << msg << std::endl;
+void TracerOutput::log(const string& msg) {
+    if (is_output_on()) {
+        for (unsigned int i = 0; i < m_indent; ++i) {
+            m_output << "     ";
         }
+        m_output << msg << std::endl;
+    }
 }
 
 TracerOutput& TracerOutput::getInstance() {
@@ -30,10 +29,9 @@ TracerOutput& TracerOutput::getInstance() {
     return instance;
 }
 
-ostream& operator<<(ostream& os, const TracerOutput& t)
-{
+ostream& operator<<(ostream& os, const TracerOutput& t) {
     os << t.m_output.str();
     return os;
 }
 
-}
+} // namespace Utils

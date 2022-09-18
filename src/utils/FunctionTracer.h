@@ -23,23 +23,22 @@ namespace Utils {
  * function body and triggers the appropriate message.
  * The messages are logged through the TrackerOutput.
  */
-class FunctionTracer
-{
+class FunctionTracer {
 public:
-        /// Constructor inserts message in TrackerOutput about entering a function body.
-        explicit FunctionTracer(const std::string& function_name);
+    /// Constructor inserts message in TrackerOutput about entering a function body.
+    explicit FunctionTracer(const std::string& function_name);
 
-        /// No copy constructor.
-        FunctionTracer(const FunctionTracer&) = delete;
+    /// No copy constructor.
+    FunctionTracer(const FunctionTracer&) = delete;
 
-        /// No assignment.
-        FunctionTracer& operator=(const FunctionTracer&) = delete;
+    /// No assignment.
+    FunctionTracer& operator=(const FunctionTracer&) = delete;
 
-        /// Destructor inserts message in TracketOutput about leaving funvtion body.
-        ~FunctionTracer();
+    /// Destructor inserts message in TracketOutput about leaving funvtion body.
+    ~FunctionTracer();
 
 private:
-        std::string const m_function_name;
+    std::string const m_function_name;
 };
 
-} // Utils
+} // namespace Utils

@@ -11,10 +11,9 @@ Exception::Exception(const Exception& e) : m_message(e.m_message) { MEMBER_TRACE
 
 Exception::Exception(Exception&& e) noexcept : m_message(std::move(e.m_message)) { MEMBER_TRACER; }
 
-const char* Exception::what() const noexcept
-{
-        MEMBER_TRACER;
-        return m_message.c_str();
+const char* Exception::what() const noexcept {
+    MEMBER_TRACER;
+    return m_message.c_str();
 }
 
 void Exception::info() const { MEMBER_TRACER; }

@@ -4,14 +4,12 @@
 using namespace std;
 using namespace Utils;
 
-FunctionTracer::FunctionTracer(const string& function_name) : m_function_name(function_name)
-{
+FunctionTracer::FunctionTracer(const string& function_name) : m_function_name(function_name) {
     TracerOutput::getInstance().log("---> function body: " + m_function_name);
     TracerOutput::getInstance().increase_indent();
 }
 
-FunctionTracer::~FunctionTracer()
-{
+FunctionTracer::~FunctionTracer() {
     TracerOutput::getInstance().decrease_indent();
     TracerOutput::getInstance().log("<--- function body: " + m_function_name);
 }

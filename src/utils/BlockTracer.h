@@ -17,23 +17,22 @@ namespace Utils {
  * block and triggers the appropriate message.
  * The messages are logged through the tarcer log.
  */
-class BlockTracer
-{
+class BlockTracer {
 public:
-        /// Constructor insert message in TrackerOutput about entering a block.
-        explicit BlockTracer(const std::string& msg);
+    /// Constructor insert message in TrackerOutput about entering a block.
+    explicit BlockTracer(const std::string& msg);
 
-        /// No copy constructor.
-        BlockTracer(const BlockTracer&) = delete;
+    /// No copy constructor.
+    BlockTracer(const BlockTracer&) = delete;
 
-        /// No assignment.
-        BlockTracer& operator=(const BlockTracer&) = delete;
+    /// No assignment.
+    BlockTracer& operator=(const BlockTracer&) = delete;
 
-        /// Destructor inserts message in TracerOutput about leaving a block.
-        ~BlockTracer();
+    /// Destructor inserts message in TracerOutput about leaving a block.
+    ~BlockTracer();
 
 private:
-        const std::string m_msg;
+    const std::string m_msg;
 };
 
-} // Utils
+} // namespace Utils
