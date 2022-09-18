@@ -15,10 +15,9 @@ public:
 
     ///
     void list(std::ostream& os) const {
-        std::map<std::string, Function>::const_iterator itor;
         os << "The available exercises are:" << std::endl << std::endl;
-        for (itor = begin(); itor != end(); itor++) {
-            os << (*itor).first << std::endl;
+        for (auto& pair: *this) {
+            os << pair.first << std::endl;
         }
         os << std::endl;
     }
@@ -31,15 +30,15 @@ int main() {
         // Setting up the register with available tests
         //----------------------------------------------------------------------
         FunctionRegister f_reg;
-        f_reg["app_copy"] = app_copy;
-        f_reg["app_essentialops"] = app_essentialops;
-        f_reg["app_exception"] = app_exception;
-        f_reg["app_fcalls"] = app_fcalls;
-        f_reg["app_hierarchies"] = app_hierarchies;
-        f_reg["app_poly1"] = app_poly1;
-        f_reg["app_poly2"] = app_poly2;
-        f_reg["app_example_exam_2021_1"] = app_example_exam_2021_1;
-        f_reg["app_example_exam_2021_2"] = app_example_exam_2021_2;
+        f_reg["copy"] = app_copy;
+        f_reg["essentialops"] = app_essentialops;
+        f_reg["exception"] = app_exception;
+        f_reg["fcalls"] = app_fcalls;
+        f_reg["hierarchies"] = app_hierarchies;
+        f_reg["poly1"] = app_poly1;
+        f_reg["poly2"] = app_poly2;
+        f_reg["exam_2021_1"] = app_example_exam_2021_1;
+        f_reg["exam_2021_2"] = app_example_exam_2021_2;
         f_reg.list(std::cout);
 
         //----------------------------------------------------------------------
