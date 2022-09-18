@@ -31,6 +31,8 @@ You should now get a list of exercises to choose from:
       essentialops
       exam_2021_1
       exam_2021_2
+      exam_2022_1
+      exam_2022_2
       exception
       fcalls
       hierarchies
@@ -48,6 +50,6 @@ Simply type one of the names followed by pressing enter, and the trace should be
 2. Inside the file rename the name of the function containing the trace to name of the file: `app_test()`
 3. Add the file to the library in [`src/exercises/CMakeLists.txt`](src/exercises/CMakeLists.txt)
 5. In [`src/exercises/demos.h`](src/exercises/demos.h), add your new trace function: `int app_trace();`
-6. In [`main.cpp`](src/main.cpp), add your function to the function register: `f_reg["test"] = app_test` near line 42;
+6. In [`main.cpp`](src/main.cpp), add your function to the function register: `f_reg["test"] = app_test` near line 43;
 7. Rerun `cmake ..` and `make install`
 8. When executing `./installed/bin/tracer` now, your file should be one of the options to trace, and you can log the trace of your file!
