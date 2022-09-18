@@ -7,37 +7,37 @@ The Doxygen documentation can be found [here](https://www.thomasave.be/object-tr
 
 Create a build folder and enter it:
 
-  mkdir build
-  cd build
+    mkdir build
+    cd build
   
 Run CMake and compile the program:
 
-  cmake ..
-  make
+    cmake ..
+    make
   
 Install the program to the `installed` directory:
 
-  make install
+    make install
   
 Run the object tracer:
 
-  ./installed/bin/tracer 
+    ./installed/bin/tracer 
   
 You should now get a list of exercises to choose from:
 
-  The available exercises are:
+    The available exercises are:
 
-    copy
-    essentialops
-    exam_2021_1
-    exam_2021_2
-    exception
-    fcalls
-    hierarchies
-    poly1
-    poly2
+      copy
+      essentialops
+      exam_2021_1
+      exam_2021_2
+      exception
+      fcalls
+      hierarchies
+      poly1
+      poly2
 
-  Select a demo by name: 
+    Select a demo by name: 
 
 Simply type one of the names followed by pressing enter, and the trace should be logged to stdout!
 
