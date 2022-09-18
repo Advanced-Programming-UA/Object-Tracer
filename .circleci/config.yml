@@ -12,3 +12,9 @@ jobs:
     - run: mkdir -p build
     - run: cd build && cmake ..
     - run: cd build && make
+    - run: cd build && make install
+    - run: cd build && make doc
+    - store_artifacts:
+        path: build/installed
+    - store_artifacts:
+        path: build/doc
