@@ -5,6 +5,7 @@ add_library(exercises
     app_exam_2021_2.cpp
     app_exam_2022_1.cpp
     app_exam_2022_2.cpp
+    app_exam_2023_1.cpp
     app_exception.cpp
     app_fcalls.cpp
     app_hierarchies.cpp

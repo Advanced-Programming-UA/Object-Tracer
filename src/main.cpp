@@ -41,6 +41,7 @@ int main() {
         f_reg["exam_2021_2"] = app_exam_2021_2;
         f_reg["exam_2022_1"] = app_exam_2022_1;
         f_reg["exam_2022_2"] = app_exam_2022_2;
+        f_reg["exam_2023_1"] = app_exam_2023_1;
         f_reg.list(std::cout);
 
         //----------------------------------------------------------------------
